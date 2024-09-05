@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function NewTab() {
     window.open(
-      "https://drive.google.com/file/d/1OYICcZ2OpTb6s7vusCUav4SnalCT3Xda/view?usp=sharing",
-      "_blank"
+    "https://drive.google.com/file/d/1Vb0ryZMQW9Cc6njnZCTauKqek_C7XrCO/view?usp=sharing",
+    "_blank"
     );
   }
 });
