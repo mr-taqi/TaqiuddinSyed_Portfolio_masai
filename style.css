@@ -966,16 +966,21 @@ a{
 }
 
 @media only screen and (max-width: 710px) {
-    .gitStats{
+    #gh{
         display: none;
     }
 }
 
+@media only screen and (max-width: 880px) {
+    #gh{
+        transform: scale(0.7);
+    }
+}
+
 #gh {
-    margin: auto;
-    width: 90%;
-    height: 200px;
-    border: 1px solid goldenrod;
-    padding: 15px;
-    border-radius: 10px;
+    margin-top: 2%;
+    height: 130px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 15px;
 }

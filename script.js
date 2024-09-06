@@ -58,6 +58,8 @@ $(document).ready(function(){
     });
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let resume1 = document
     .getElementById("resume-button-1")
@@ -73,46 +75,45 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 });
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-document.addEventListener('DOMContentLoaded', function() {
-    const username = document.getElementById('gh').getAttribute('data-login');
-    const apiUrl = `https://api.github.com/users/${mr-taqi}/events/public`; 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const username = document.getElementById('gh').getAttribute('data-login');
+//     const apiUrl = `https://api.github.com/users/${mr-taqi}/events/public`; 
 
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const contributions = {};
-            data.forEach(event => {
-                if (event.type === 'PushEvent') {
-                    const date = new Date(event.created_at).toISOString().split('T')[0];
-                    contributions[date] = (contributions[date] || 0) + 1;
-                }
-            });
+//     fetch(apiUrl)
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok');
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             const contributions = {};
+//             data.forEach(event => {
+//                 if (event.type === 'PushEvent') {
+//                     const date = new Date(event.created_at).toISOString().split('T')[0];
+//                     contributions[date] = (contributions[date] || 0) + 1;
+//                 }
+//             });
 
-            renderContributions(contributions);
-        })
-        .catch(error => console.error('Error fetching contribution data:', error));
+//             renderContributions(contributions);
+//         })
+//         .catch(error => console.error('Error fetching contribution data:', error));
 
-    function renderContributions(contributions) {
-        const container = document.getElementById('gh');
-        container.innerHTML = '';
+//     function renderContributions(contributions) {
+//         const container = document.getElementById('gh');
+//         container.innerHTML = '';
 
-        for (const [date, count] of Object.entries(contributions)) {
-            const contributionElement = document.createElement('div');
-            contributionElement.style.width = '100%';
-            contributionElement.style.height = `${count * 10}px`;
-            contributionElement.style.backgroundColor = '#28a745';
-            contributionElement.style.margin = '1px 0';
-            contributionElement.title = `${date}: ${count} contributions`;
-            container.appendChild(contributionElement);
-        }
-    }
-});
+//         for (const [date, count] of Object.entries(contributions)) {
+//             const contributionElement = document.createElement('div');
+//             contributionElement.style.width = '100%';
+//             contributionElement.style.height = `${count * 10}px`;
+//             contributionElement.style.backgroundColor = '#28a745';
+//             contributionElement.style.margin = '1px 0';
+//             contributionElement.title = `${date}: ${count} contributions`;
+//             container.appendChild(contributionElement);
+//         }
+//     }
+// });
 
 
