@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function NewTab() {
     window.open(
-    "https://drive.google.com/file/d/1I0z7WCiTyh0X3JawTO75MRDwlcL06JsQ/view?usp=sharing",
+    "https://drive.google.com/file/d/179Qx58ZHlbE2diKWYgUWO0SqoJ-Kf3E1/view?usp=sharing",
     "_blank"
     );
   }
